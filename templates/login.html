@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>数据化可视系统登录</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+
+    <link rel="shortcut icon" href="/static/images/图表%20(1).png"><link href="/static/plugins/bootstrap-5.0.0-beta1-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <link href="/static/css/animate.css" rel="stylesheet">
+    <link href="/static/css/style.css?v=4.1.0" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html" />
+    <![endif]-->
+    <script>
+        if(window.top !== window.self){ window.top.location = window.location;}
+
+    </script>
+    <style type="text/css">
+        a{text-decoration:none}
+    </style>
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">Visio</h1>
+
+            </div>
+            <h3>欢迎使用数据化可视系统</h3>
+
+            <form class="m-t" role="form" action="" method="post">
+                {%  csrf_token %}
+                <p class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="用户名" required="">
+                </p>
+                <p class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="密码" required="">
+                </p>
+                <input type="submit"  id="login" class="btn btn-primary block full-width m-b" value="登录">
+
+
+
+                <p class="text-muted text-center"> <a href="/login"><small>忘记密码了？</small></a> | <a href="/login/register">注册一个新账号</a></p>
+                <span id="passFalse" class="text-danger">{{ rtl }}</span>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- 全局js -->
+    <script src="/static/js/jquery-3.5.1.js"></script>
+    <script src="/static/plugins/bootstrap-5.0.0-beta1-dist/js/bootstrap.js"></script>
+
+
+
+</body>
+
+</html>
